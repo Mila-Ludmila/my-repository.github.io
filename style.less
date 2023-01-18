@@ -1,0 +1,167 @@
+body {
+    background-color: #f5f5f5;
+  }
+  @margin: 300px 70px 0px 70px;
+  @margin3: 0px -2px 0px -7px;
+  @margin4: 650px 70px 0px 70px;
+  @margin1: 10px 0;
+  @margin-left: 30px;
+  @margin-right: 30px;
+  @margin_red: 0px 544px 0px 0px;
+  @margin_orange: 0px 0px 0px 545px;
+  @margin-top: 5px;
+  @margin_0: 0px;
+  @height: 130px;
+  @height2: 65px;
+  @height3: 285px;
+  @height4: 350px;
+  @height5: 50px;
+  @width: 100%;
+  @width:@height + 260px;
+  @width2: 1350px;
+  @width3: 1100px;
+  @width5: 950px;
+  @width_calc: calc((100% / 3) - 100px);
+  @width4: calc((1100px / 2) - 50px);
+  @width_yellow: calc(100% - 55px);
+  @width_yellow2: calc(100% - 51px);
+  .div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    gap: 20px;
+    border: 2px black solid;
+    padding: 10px;
+    margin: @margin;
+    width: @width2;
+    height: @height;
+    }
+    .red, 
+    .orange, 
+    .yellow{
+      width:@width_calc;
+      height: @height2;
+      border: 2px black solid;
+      font-size: 35px;
+      padding: 30px 5px;
+      margin-left: @margin-left;
+      margin-right: @margin-right;
+  }
+  .red{
+    background-color: red;
+    color: white;
+    text-align: left;
+  }
+  .orange{
+    background-color: orange;
+    color: white;
+    text-align: center;
+  }
+  .yellow{
+    background-color: yellow;
+    color: black;
+    text-align: right;
+  }
+.media{
+  .div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    gap: 20px;
+    border: 2px black solid;
+    padding: 10px;
+    margin: @margin;
+    width: @width3;
+    height: @height3;
+  }
+  .red, 
+  .orange, 
+  .yellow{   
+      height: @height2;
+      border: 2px black solid;
+      font-size: 35px;
+      padding: 30px 5px;
+  }
+  .red{
+    background-color: red;
+    color: white;
+    text-align: left;
+    width:@width4;
+    position: absolute;
+    margin: @margin_red;
+  }
+  .orange{
+    background-color: orange;
+    color: white;
+    text-align: center;
+    width:@width4;
+    position: absolute;
+    margin: @margin_orange;
+  }
+  .yellow{
+    background-color: yellow;
+    color: black;
+    text-align: right;
+    width: @width_yellow;
+    margin: 153px 0 0 0px;
+  }
+}
+.media2{
+  .div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    gap: 20px;
+    border: 2px black solid;
+    padding: 10px;
+    margin: @margin;
+    width: @width5;
+    height: @height4;
+  }
+  .red, 
+  .orange, 
+  .yellow{   
+      border: 2px black solid;
+      font-size: 35px; 
+      margin-left: 20px;
+      height: @height5;
+  }
+  .red{
+    background-color: red;
+    color: white;
+    text-align: left;
+    padding: 30px 5px;
+    position: relative;
+    margin-top: @margin-top;
+    width: @width_yellow;
+  }
+  .orange{
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 30px 5px;
+    position: relative;
+    width: @width_yellow;
+  }
+  .yellow{
+    background-color: yellow;
+    color: black;
+    text-align: right;
+    margin: @margin_0;
+    padding: 0px 5px 0px 0px;
+    width: @width_yellow2;
+  }
+}
+@media (max-width: 1350px){
+  .media();
+}
+@media (max-width: 1200px){
+  .media2();
+}
+  
